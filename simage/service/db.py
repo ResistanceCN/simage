@@ -1,7 +1,6 @@
 """Connect to the MongoDB."""
 from simage.tools.logger import log
 from pymongo import MongoClient
-from pprint import pprint
 import config
 
 
