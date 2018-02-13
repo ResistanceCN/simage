@@ -1,7 +1,10 @@
 def get_filename(path, insert_str=''):
     """Get the single path and filename."""
     path_tmp = path.split('/')
-    single_path = '/'.join(path_tmp[:-1]) + '/'
+    if len(path_tmp) == 1:
+        single_path = ''
+    else:
+        single_path = '/'.join(path_tmp[:-1]) + '/'
     if len(path_tmp) == 1:
         filename = path_tmp[0]
     else:
